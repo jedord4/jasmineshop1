@@ -1,0 +1,167 @@
+html{
+    scroll-behavior: smooth;
+}
+body {
+    background-image: url(pexels-nacho-lledo-854884-3990146.jpg);
+    background-position: center;
+    background-size: cover;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+header {
+    background: linear-gradient(to right, #000, #555);
+    color: #fff;
+    padding: 30px 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+header h1 {
+    font-size: 3rem;
+    margin: 0;
+}
+header p {
+    margin-top: 10px;
+    font-size: 1.2rem;
+}
+nav {
+    text-align: center;
+    margin: 20px 0;
+}
+nav a {
+    text-decoration: none;
+    color: #ffffff;
+    margin: 0 4px;
+    font-size: 18px;
+    font-weight: bold;
+    position: relative;
+    background: linear-gradient(to right, #000, #979696);
+    padding: 2px;
+    border-radius: 7px;
+}
+nav a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(to right, #000, #979696);
+    transition: width 0.3s;
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+nav a:hover::after {
+    width: 100%;
+}
+h2{
+    color: white;
+    background: linear-gradient(to right, #000, #979696);
+    padding: 5px;
+    flex: 1 1 calc(30% - 20px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+section {
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 1200px;
+}
+.mashy{
+    width: 80%;
+    height: 80%;
+    border-radius: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    position: center;
+}
+.services, .gallery, .jaded {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+.service-item {
+    flex: 1 1 calc(30% - 20px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.gallery-item { 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.service-item:hover, .gallery-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+.service-item {
+    background: #fff;
+    padding: 20px;
+    text-align: center;
+}
+.jaded {
+    color: white;
+    background: linear-gradient(to right, #000, #979696);
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+}
+.gallery-item img {
+    width: 100%;
+    display: flex;
+    height: 300px;
+    object-fit: cover;
+    position: relative;
+    
+}
+.ner{
+    color: white;
+}
+footer {
+    background: #000;
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+}
+.cta {
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+    margin: 30px auto;
+    text-align: center;
+    padding: 20px;
+    background: linear-gradient(to right, #00ff1e, #103e00);
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+.cta:hover {
+    transform: scale(1.05);
+}
+@keyframes appear{
+    from{
+        opacity: 0;
+        scale: 0.5;
+    }
+    to{
+        opacity: 1;
+        scale: 1;
+    }
+}
